@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: #222;
+}
+
+.navbar {
+    padding: 0.8rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.navbar-nav li {
+    padding-right: 20px;
+}
+
+.nav-link {
+    font-size: 1.1em imp !important;
+}
+
+.carousel-inner img {
+    width: 100vw;
+    background-image: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.carousel-caption h1 {
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 15px #000;
+}
+
+.carousel-caption h3 {
+    font-size: 200%;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px #000;
+    padding-bottom: 1.1rem;
+}
+
+.padding {
+    padding-bottom: 2rem;
+}
+
+.welcome {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.welcome hr {
+    border-top: 2px solid #b4b4b4;
+    width: 95%;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-us {
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(234,249,251,0.63) 0.1%, rgba(239,249,251,0.63) 90.1%);
+}
