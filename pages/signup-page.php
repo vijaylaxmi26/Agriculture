@@ -1,38 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <style>
-        .border-md {
-            border-width: 2px;
-        }
+<?php  require_once("./../includes/header.php"); ?>
 
-        .btn-facebook {
-            background: #405D9D;
-            border: none;
-        }
-
-        .btn-facebook:hover, .btn-facebook:focus {
-            background: #314879;
-        }
-
-        .btn-twitter {
-            background: #42AEEC;
-            border: none;
-        }
-
-        .btn-twitter:hover, .btn-twitter:focus {
-            background: #1799e4;
-        }
-    </style>
-
-</head>
-<body>
     <!-- Navbar-->
     <nav class="navbar py-4 navbar-expand-md navbar-light bg-light sticky-top bg-white">
         <div class="container-fluid">
@@ -137,7 +104,7 @@
                                 </span>
                                 
                             </div>
-                            <input id="land" type="file" name="landimage" class="form-control bg-white border-left-0 border-md">
+                            <input id="land" type="file" name="image" class="form-control bg-white border-left-0 border-md">
                         </div>
 
                         <!---Address -->

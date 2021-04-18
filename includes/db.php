@@ -3,7 +3,7 @@
 $sever ="localhost";
 $user="root";
 $pas="";
-$database="AgriUser";
+$database="agriuser";
 
 $conn = mysqli_connect($sever,$user,$pas,$database);
 
