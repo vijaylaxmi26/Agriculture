@@ -96,6 +96,60 @@
                             <input id="lastName" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md">
                         </div>
 
+                        <!-- landarea -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="land" type="number" name="land" placeholder="Land area in Acres" class="form-control bg-white border-left-0 border-md">
+                        </div>
+                        
+                        <!-- Section -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                            </div>
+                            <select id="cars" name="cars">
+                                <option value="volvo">Farmer</option>
+                                <option value="saab">Invester</option>
+                            </select>
+                        </div>
+
+                        <!-- userimage-->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                                
+                            </div>
+                            <input id="land" type="file" name="userimage" class="form-control bg-white border-left-0 border-md">
+                        </div>
+                         <!-- land image-->
+                         <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                                
+                            </div>
+                            <input id="land" type="file" name="landimage" class="form-control bg-white border-left-0 border-md">
+                        </div>
+
+                        <!---Address -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-envelope text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="email" type="textarea" name="address" placeholder="Address" class="form-control bg-white border-left-0 border-md">
+                        </div>
+
                         <!-- Email Address -->
                         <div class="input-group col-lg-12 mb-4">
                             <div class="input-group-prepend">
@@ -178,8 +232,8 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </body>
 </html>
