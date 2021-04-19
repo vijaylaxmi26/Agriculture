@@ -55,7 +55,25 @@ if(isset($_POST['ssubmit']))
 
     if($result){
        $subject="Contract verification";
-       $message= "<a href='http://localhost/amoc/Agriculture/includes/verify.php?vkey=$vkey'>verify details</a>";
+       $sql4 = "select * from `invester` where inv_id = $investorid";
+       $stmt= $pdo->prepare($sql4);
+       $stmt->execute();
+       $details=$stmt->fetch(PDO::FETCH_ASSOC);
+       $iname = $details['inv_name'];
+       $iphone = $details['inv_phone'];
+
+       $message= "Hi $iname,</br>
+
+       Invester $iname is interested in signing a farming contract with you. They currently need the supply of $crop.</br>
+       Other details are</br>
+       Crop Name - $crop</br>
+       Quantity -$quantity</br>
+       Period - $period</br>
+       They are ready to invest $invest rupees in it</br>
+       If interested, you can contact the investor by using the following details</br>
+       
+       $iname - $iphone</br>
+       <a href='http://localhost/amoc/Agriculture/includes/verify.php?vkey=$vkey'>verify details</a>";
        $sentmail=mail($to,$subject,$message,$headers);
        if($sentmail){
        header("location: ../index.php?error=none");
