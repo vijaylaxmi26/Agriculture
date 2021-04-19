@@ -10,7 +10,22 @@ if(isset($_POST['ssubmit']))
     $quantity = $_POST['quantity'];
     $period = $_POST['year'];
     $invest = $_POST['invest'];
-                    
+
+    $vkey = md5(time().$investorid);
+    
+    $sql3 = "select faremail from `farmer` where farid = $farmid";
+    $stmt= $pdo->prepare($sql3);
+    $stmt->execute();
+    $femail=$stmt->fetch(PDO::FETCH_ASSOC);
+    $to= $femail['faremail']; 
+    
+    
+    
+    $headers="From: codervk2000@gmail.com \r\n";
+    $headers .= "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+
     $prehash=0;
     $hash=0;
 
@@ -33,14 +48,27 @@ if(isset($_POST['ssubmit']))
     
     $hash=hash('md5',$contrat);
 
-    $sql1 ="INSERT INTO `smart-contract`(far_id ,invt_id ,`farmcrop`, `period` ,amount ,investment ,pre_hash ,hash ) VALUES($farmid, $investorid,'$crop', '$period', '$quantity', '$invest', '$prehash', '$hash')";
+    $sql1 ="INSERT INTO `smart-contract`(`far_id` ,`invt_id` ,`farmcrop`, `period` ,amount ,investment ,pre_hash ,hash,vkey ) VALUES('$farmid', '$investorid','$crop', '$period', '$quantity', '$invest', '$prehash', '$hash','$vkey')";
 
     $stmt =$pdo->prepare($sql1);
-    $stmt->execute();
+    $result= $stmt->execute();
 
-    header("location: ../index.php?error=none");
-    exit();
+    if($result){
+       $subject="Contract verification";
+       $message= "<a href='http://localhost/amoc/Agriculture/includes/verify.php?vkey=$vkey'>verify details</a>";
+       $sentmail=mail($to,$subject,$message,$headers);
+       if($sentmail){
+       header("location: ../index.php?error=none");
+       exit();
+       }
+   
 
+    }else{
+        header("http://localhost/amoc/Agriculture/includes/verify.php");
+        exit();
+    }
+
+    
 
 }
 
