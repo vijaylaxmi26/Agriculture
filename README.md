@@ -35,7 +35,7 @@ Web Technologies - HTML, CSS, BOOTSTRAP, JQUERY, PHP, SQL
 4. The concept of blockchain was completely new to us. So learning it in the given time period and implementing it in our project was a big challenge for us.
 
 # Team Name 
-<h4>Techno Starks</h4>
+<h3>Techno Starks</h3>
 Team Members - <br>
 <a href="https://github.com/kalpita01">1. Kalpita Goyal</a><br>
 <a href="https://github.com/vijaylaxmi26">2. Vijaylaxmi</a>
