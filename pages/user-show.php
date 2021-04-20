@@ -118,6 +118,8 @@
 				$farmer_photo = $posts['farimgland'];
                 $farmer_land=$posts['farland'];		
                 $farmer_addr=$posts['faraddr'];	
+				$farmer_phone=$posts['farphone'];
+				$farmer_email=$posts['faremail'];		
 				//$imageURL1 = $posts['farimland'];	
 					
 				//$imageURL = $imageURL1;
@@ -130,7 +132,9 @@
 					<div class="text">
 						<h3><?php echo "$farmer_fname $farmer_lname"?></h3>
 						<p class="card-text" style="font-size:12px;">Farming land: <?php echo $farmer_land ?><br>
-                        Address: <?php echo $farmer_addr ?> 
+						Farmer phone number: <?php echo $farmer_phone ?><br>
+                        Farmer email: <?php echo $farmer_email ?> </br>
+						Address: <?php echo $farmer_addr ?></br>
                        </p>
 
 					</div>
