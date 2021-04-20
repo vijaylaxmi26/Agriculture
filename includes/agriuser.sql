@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 19, 2021 at 03:51 PM
+-- Generation Time: Apr 20, 2021 at 07:39 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -35,7 +35,6 @@ CREATE TABLE `farmer` (
   `farphone` int(15) NOT NULL,
   `farland` int(12) NOT NULL,
   `farpass` varchar(255) NOT NULL,
-  `farimguser` varchar(255) NOT NULL,
   `farimgland` varchar(255) NOT NULL,
   `faraddr` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -44,9 +43,8 @@ CREATE TABLE `farmer` (
 -- Dumping data for table `farmer`
 --
 
-INSERT INTO `farmer` (`farid`, `farfirname`, `farlasname`, `faremail`, `farphone`, `farland`, `farpass`, `farimguser`, `farimgland`, `faraddr`) VALUES
-(1, 'harsh', 'choudhary', 'harsh123@gmail.com', 123654789, 5, 'harsh@123', 'f1.jpg', 'c1.jpeg', 'sector-40, Baroda Gujarat Indea'),
-(2, 'vijaya', 'verma', 'vijaylaxmi262001@gmail.com', 469853187, 5, 'vijaya@123', 'f1.jpg', 'c.jpeg', 'word no 12, near abc building,kota,rajsthan');
+INSERT INTO `farmer` (`farid`, `farfirname`, `farlasname`, `faremail`, `farphone`, `farland`, `farpass`, `farimgland`, `faraddr`) VALUES
+(9, 'Vijaylaxmi', 'Verma', 'vijaylaxmiverma2001@gmail.com', 2147483647, 10, '12345', 'cl.jpeg', 'wordno:7 ,Rajkumar,Dholipal');
 
 -- --------------------------------------------------------
 
@@ -148,7 +146,7 @@ ALTER TABLE `smart-contract`
 -- AUTO_INCREMENT for table `farmer`
 --
 ALTER TABLE `farmer`
-  MODIFY `farid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `farid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `invester`
