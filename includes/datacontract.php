@@ -43,8 +43,7 @@ if(isset($_POST['ssubmit']))
         $prehash= $block['hash'];      
     }  
 
-    $contrat = "investor $investorid gave farming contract to farmer $farmid for the crop $crop 
-    and quantity $quantity over a period of $period years investing $invest Rupees in it and previous block $prehash";
+    $contrat = "investor $investorid gave farming contract to farmer $farmid for the crop $crop and quantity $quantity over a period of $period years investing $invest Rupees in it and previous block $prehash";
     
     $hash=hash('md5',$contrat);
 
@@ -79,7 +78,6 @@ if(isset($_POST['ssubmit']))
        header("location: ../index.php?error=none");
        exit();
        }
-   
 
     }else{
         header("http://localhost/amoc/Agriculture/includes/verify.php");

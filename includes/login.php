@@ -1,37 +1,35 @@
 <?php
+session_start();
+require('db1.php');
 
-if(isset($_POST['login'])){
-    $lemail=$_POST['email'];
-    $lpass=$_POST['password'];
+if(isset($_POST['login'])) {
+    $user_email = $_POST['login-email'];
+    $user_pass = $_POST['login-password'];
 
-    require_once 'db.php';
-    require_once 'functions.php';
-
-    $emailExists = emailExists($conn,$lemail);
-
-    if($emailExists == false) {
-        header("location: ../index.php?error=wrongloginemail");
-        exit();
-    }
-
-    $pwdHashed = $emailExists["pass"];
     
-    $checkPwd = password_verify($lpass,$pwdHashed);
-
-    if($checkPwd == false) {
-        header("location: ../index.php?error=wrongloginpass");
-        exit();
+    
+    // checking from the database
+    $sql = "SELECT * from `invester` WHERE `inv_email` = :email AND `inv_pass` = :pass";
+    $stmt = $pdo->prepare($sql);
+    if($stmt){
+        $stmt->bindParam(':email',$user_email);
+        $stmt->bindParam(':pass',$user_pass);
+        $stmt->execute();
+        if($stmt->rowCount()!=0){
+            $_SESSION['user'] = "yes";
+            header('location: ../index.php');
+            exit();
+        }
+        else {
+            echo "<h1>User Does Not exsist</h1>";
+        }
+        
     }
-    else if ($checkPwd == true) {
-        session_start();
-        $_SESSION['sno'] = $emailExists['sno'];
-        $_SESSION['username'] = $emailExists['username'];
-        header("location: ../index.php");
-        exit();
+    else
+    {
+        echo "error";
     }
+    
+    
+    
 }
-
-
-
-
-?>

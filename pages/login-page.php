@@ -129,16 +129,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a href="#" class="nav-link fw-bold">Home</a>
+                        <a href="../index.php" class="nav-link fw-bold">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link fw-bold">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link fw-bold">CONTACT US</a>
+                        <a href="farmer-register.php" class="nav-link fw-bold">Farmers</a>
                     </li>
                     <li class="nav-item">
-                        <a href="login-page.php" class="nav-link">LOGIN</a>
+                        <a href="login-page.php" class="nav-link">Login</a>
                     </li>
                 </ul>
             </div>
@@ -153,16 +153,16 @@
             <div class="login-wrapper my-auto">
                 <h1 class="login-title">Log in</h1>
                 <!-- Main Form -->
-                <form action="login.php" method="post">
+                <form action="../includes/login.php" method="post">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" class="form-control" placeholder="email@example.com">
+                        <input type="email" name="login-email" class="form-control" placeholder="email@example.com">
                     </div>
                     <div class="form-group mb-4">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="enter your passsword">
+                        <input type="password" name="login-password" id="password" class="form-control" placeholder="enter your passsword">
                     </div>
-                    <input name="login" id="login" class="btn btn-block login-btn" type="button" value="Login">
+                    <input name="login" id="login" class="btn btn-block login-btn" type="submit" value="Login">
                 </form>
                 <!-- End of Form -->
                 <a href="#!" class="forgot-password-link">Forgot password?</a>
