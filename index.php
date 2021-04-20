@@ -29,16 +29,20 @@
                     <li class="nav-item active">
                         <a href="#" class="nav-link fw-bold">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="#" class="nav-link fw-bold">About Us</a>
-                    </li>
+                    </li> -->
                     <?php 
-
+                        
                         if(isset($_SESSION['user'])) {
+                            $id=$_SESSION['userid'];
+                            echo "<li class='nav-item nav-link fw-bold' >User id : $id</li>";
+                            echo "<li class='nav-item'><a href='pages/contruct.php' class='nav-link fw-bold'>Create a Contract</a></li>";
                             echo "<li class='nav-item'><a href='pages/user-show.php' class='nav-link fw-bold'>Farmers</a></li>";
                             echo "<li class='nav-item'><a href='includes/logout.php' class='nav-link'>Logout</a></li>";
                         }
                         else{
+                            echo "<li class='nav-item'><a href='#' class='nav-link fw-bold'>About Us</a></li>";
                             echo "<li class='nav-item'><a href='pages/farmer-register.php' class='nav-link fw-bold'>Farming</a></li>";
                             echo "<li class='nav-item'><a href='pages/login-page.php' class='nav-link'>Login</a></li>";
                         }
@@ -67,8 +71,8 @@
             <div class="carousel-item active">
                 <img src="css/images/c-1.jpeg">   
                 <div class="carousel-caption">
-                    <h1 class="display-2">Sample</h1>
-                    <h3>Lorem ipsum text</h3>
+                    <h1 class="display-2">Agriculture</h1>
+                    <h3>Agriculture is the art and science of cultivating the soil, growing crops and raising livestock</h3>
                     <button type="button" class="btn btn-outline-light btn-lg">Get Started</button>
                 </div> 
             </div>
@@ -132,7 +136,7 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus sequi dolore qui laudantium sunt deleniti, id molestias eligendi magni ad excepturi sed nihil repellendus! Eveniet numquam quaerat dolor consequuntur molestias.</p>
             </div>
             <div class="col-lg-6">
-                <img src="" alt="photo" class="img-fluid">
+                <img src="css/images/c1.jpeg" alt="photo" class="img-fluid">
             </div>
         </div>
     </div>
@@ -285,8 +289,8 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            Made By 
+            <a class="text-white" href="https://mdbootstrap.com/">Techno Starks</a>
         </div>
         <!-- Copyright -->
     </footer>

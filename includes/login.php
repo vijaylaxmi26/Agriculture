@@ -15,8 +15,11 @@ if(isset($_POST['login'])) {
         $stmt->bindParam(':email',$user_email);
         $stmt->bindParam(':pass',$user_pass);
         $stmt->execute();
+        $data=$stmt->fetch(PDO::FETCH_ASSOC);
+        $id= $data['inv_id']; 
         if($stmt->rowCount()!=0){
             $_SESSION['user'] = "yes";
+            $_SESSION['userid']=$id;
             header('location: ../index.php');
             exit();
         }

@@ -86,7 +86,7 @@
 						<a href="../index.php" class="nav-link fw-bold">Home</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link fw-bold">About Us</a>
+						<a href="contruct.php" class="nav-link fw-bold">Create a Contract</a>
 					</li>
 					<li class="nav-item">
 						<a href="user-show.php" class="nav-link fw-bold">Farmers</a>
@@ -113,6 +113,7 @@
 			$stmt->execute();
 
 			while($posts=$stmt->fetch(PDO::FETCH_ASSOC)){
+				$farmer_id=$posts['farid'];
 				$farmer_fname =$posts['farfirname'];
                 $farmer_lname =$posts['farlasname'];
 				$farmer_photo = $posts['farimgland'];
@@ -131,7 +132,8 @@
 					</div>
 					<div class="text">
 						<h3><?php echo "$farmer_fname $farmer_lname"?></h3>
-						<p class="card-text" style="font-size:12px;">Farming land: <?php echo $farmer_land ?><br>
+						<p class="card-text" style="font-size:12px;">Farming id: <?php echo $farmer_id ?><br>
+						Farming land: <?php echo $farmer_land ?><br>
 						Farmer phone number: <?php echo $farmer_phone ?><br>
                         Farmer email: <?php echo $farmer_email ?> </br>
 						Address: <?php echo $farmer_addr ?></br>

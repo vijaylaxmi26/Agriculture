@@ -16,13 +16,13 @@
                         <a href="../index.php" class="nav-link fw-bold">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link fw-bold">About Us</a>
+                        <a href="contruct.php" class="nav-link fw-bold">Create a Contract</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link fw-bold">CONTACT US</a>
+                        <a href="user-show.php" class="nav-link fw-bold">Farmers</a>
                     </li>
                     <li class="nav-item">
-                        <a href="login-page.php" class="nav-link">LOGIN</a>
+                        <a href="../includes/logout.php" class="nav-link">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -31,7 +31,7 @@
 
     
     <div class="container">
-        <div><h1 style="color: red; text-align:center;">Contract of intructor and farmer for contruct farming</h1></div>
+        <div><h1 style="color: red; text-align:center;">Contract between a Farmer and an Investor</h1></div>
         <div class="row py-5 mt-4 align-items-center">
             <!-- For Demo Purpose -->
             <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
