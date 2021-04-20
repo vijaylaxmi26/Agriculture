@@ -74,7 +74,7 @@
 	<nav class="navbar py-4 navbar-expand-md navbar-light bg-light sticky-top bg-white">
 		<div class="container-fluid">
 			<a href="#" class="navbar-brand">
-				<img src="css/images/tractor.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+				<img src="../css/images/tractor.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
 				Agriculture
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -83,16 +83,16 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a href="#" class="nav-link fw-bold">Home</a>
+						<a href="../index.php" class="nav-link fw-bold">Home</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link fw-bold">About Us</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link fw-bold">CONTACT US</a>
+						<a href="user-show.php" class="nav-link fw-bold">Farmers</a>
 					</li>
 					<li class="nav-item">
-						<a href="pages/login-page.php" class="nav-link">LOGIN</a>
+						<a href="../includes/logout.php" class="nav-link">Logout</a>
 					</li>
 				</ul>
 			</div>
@@ -115,19 +115,22 @@
 			while($posts=$stmt->fetch(PDO::FETCH_ASSOC)){
 				$farmer_fname =$posts['farfirname'];
                 $farmer_lname =$posts['farlasname'];
-				$farmer_photo = $posts['farimguser'];
+				$farmer_photo = $posts['farimgland'];
                 $farmer_land=$posts['farland'];		
-                $farmer_addr=$posts['faraddr'];			
+                $farmer_addr=$posts['faraddr'];	
+				//$imageURL1 = $posts['farimland'];	
+					
+				//$imageURL = $imageURL1;
 				?>
 				
 				<div class="box">
 					<div class="imgBx">
-						<img src="../css/images/f1.jpg" alt="<?php echo $farmer_photo ?>">
+						<img src="../includes/images/<?php echo $farmer_photo; ?>" alt="<?php echo $farmer_photo ?>">
 					</div>
 					<div class="text">
 						<h3><?php echo "$farmer_fname $farmer_lname"?></h3>
 						<p class="card-text" style="font-size:12px;">Farming land: <?php echo $farmer_land ?><br>
-                        Address: <?php echo $farmer_addr ?>
+                        Address: <?php echo $farmer_addr ?> 
                        </p>
 
 					</div>
